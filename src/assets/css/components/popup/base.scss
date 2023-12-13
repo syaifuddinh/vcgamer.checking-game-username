@@ -1,0 +1,10 @@
+@import "@/assets/css/var/_mixins.scss";
+
+.popup-trigger {
+	@include inline-flex;
+	@include flex-center-y;
+}
+
+.popup {
+	position: fixed;
+}

@@ -1,0 +1,84 @@
+@import "@/assets/css/var/_variables.scss";
+@import "@/assets/css/var/_mixins.scss";
+
+@mixin sidebar-base-size {
+	min-width: 18rem;
+	width: 25%;
+}
+
+@mixin sidebar-mobile-size {
+	min-width: 13rem;
+	width: 20%;
+}
+
+sidebar {
+	@include sidebar-base-size;
+}
+
+
+.sidebar {
+	@include sidebar-base-size;
+	background: white;
+	position: fixed;
+	min-height: 100%;
+	height: 100%;
+
+	.sidebar_heading {
+		@include flex;
+		@include flex-end-x;
+		padding: #{$base-spacing * 0.625} #{$base-spacing} 0;		
+	}
+
+	.sidebar_close-button {
+		display: inline;
+		cursor: pointer;
+	}
+
+	.sidebar_logout a {
+		color: #{$danger-color}!important;
+	}
+
+	.sidebar_item {
+		border-bottom: 1px solid #{$light-gray-color};
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.sidebar_item a {
+		display: block;
+		color: #{$black-color};
+		padding: #{$base-spacing * 0.75} #{$base-spacing};
+		font-weight: 500;
+		text-transform: capitalize;
+		font-size: 1rem;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	@media only screen and (max-width: #{$sm-size}) {
+		.sidebar_item a {
+			font-size: 0.75rem;
+		}
+	}
+}
+
+.default-layout.sidebar-is-invisible {
+	sidebar {
+		min-width: 0;
+		width: 0;
+		display: none;
+	}	
+}
+
+@media only screen and (max-width: #{$sm-size}) {
+	sidebar {
+		@include sidebar-mobile-size;
+	}
+	.sidebar {
+		@include sidebar-mobile-size;
+	}
+}

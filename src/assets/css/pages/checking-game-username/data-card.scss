@@ -1,0 +1,104 @@
+@import "@/assets/css/var/_variables.scss";
+@import "@/assets/css/var/_mixins.scss";
+
+$padding: $base-spacing * 0.825;
+
+$wide-desktop-size: calc(20% - #{$base-spacing * 0.8});
+
+$desktop-size: calc(25% - #{$base-spacing * 0.75});
+
+$tablet-size: calc(33.3333333333% - #{$base-spacing * 0.75});
+
+
+$mobile-size: calc(50% - #{$base-spacing * 0.75});
+
+$tiny-mobile-size: 100%;
+
+.checking-game-username {
+	.data-card {
+		@include card-interface;
+
+		cursor: pointer;
+		width: #{$desktop-size};
+		min-width: #{$desktop-size};
+		max-width: #{$desktop-size};
+		overflow: hidden;
+
+		&:hover {
+			.data-card_title {
+				color: #{$primary-color};
+				font-weight: 600;
+				text-decoration: underline;
+			}		
+		}
+
+		.data-card_title {
+			padding: 0 #{$padding} #{$padding};
+			margin-top: #{$base-spacing * 0.5};
+			font-weight: 500;
+			font-size: 1.125rem;
+			min-height: 4.5rem;
+		}
+
+		@media only screen and (max-width: #{$sm-size}) {
+			.data-card_title {
+				font-size: 0.825rem;
+			}
+		}
+
+		.data-card_thumbnail {
+			height: 8rem;
+			max-height: 8rem;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+
+			img {
+				height: 8rem;
+				width: 100%;
+			}
+		}
+	}
+
+	@media only screen and (max-width: #{$md-size}) {
+		.data-card {
+			width: #{$mobile-size};
+			min-width: #{$mobile-size};
+			max-width: #{$mobile-size};
+		}
+	}
+
+	@media only screen and (max-width: #{$sm-size}) {
+		.data-card {
+			width: #{$tiny-mobile-size};
+			min-width: #{$tiny-mobile-size};
+			max-width: #{$tiny-mobile-size};
+		}
+	}
+}
+
+.default-layout.sidebar-is-invisible {
+	.checking-game-username {
+		.data-card {
+			width: #{$wide-desktop-size};
+			min-width: #{$wide-desktop-size};
+			max-width: #{$wide-desktop-size};
+		}
+
+		@media only screen and (max-width: #{$md-size}) {
+			.data-card {
+				width: #{$desktop-size};
+				min-width: #{$desktop-size};
+				max-width: #{$desktop-size};
+			}
+		}
+
+		@media only screen and (max-width: #{$sm-size}) {
+			.data-card {
+				width: #{$mobile-size};
+				min-width: #{$mobile-size};
+				max-width: #{$mobile-size};
+			}
+		}
+	}
+}

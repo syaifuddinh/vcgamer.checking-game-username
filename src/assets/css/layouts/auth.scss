@@ -1,0 +1,32 @@
+@import "@/assets/css/var/_mixins.scss";
+
+.auth {
+	@include flex;
+	padding: #{$base-spacing * 2};
+	gap: #{$base-spacing * 4};
+
+	.auth_main__alternative {
+		@include flex;
+		@include flex-center-x;
+	}
+
+	.auth_col-1 {
+		@include flex-center;
+		height: 100%;
+	}
+
+	.auth_col-1 img {
+		height: 88vh;
+		width: auto;
+	}
+
+	.auth_main {
+		@include flex-column;
+		@include flex-center-x;
+	}
+
+	.auth_main__form {
+		@include base-form-layout;
+		margin-top: #{$base-spacing};
+	}	
+}

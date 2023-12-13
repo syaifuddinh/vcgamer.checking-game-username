@@ -1,0 +1,31 @@
+@import "@/assets/css/var/_mixins";
+
+$button-color: $primary-color;
+
+.searching-input.text-input {
+	.searching-input_container {
+		@include flex;
+	}
+
+	.text-input_container {
+		border-right: none;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.searching-input_button {
+		@include flex-center;
+
+		border: 1px solid #{$button-color};
+		background: #{$button-color};
+		border-top-right-radius: #{$base-radius};
+		border-bottom-right-radius: #{$base-radius};
+		padding: #{$base-spacing * 0.75};
+		cursor: pointer;
+
+		img {
+			height: 1.25rem;
+			width: auto;
+		}
+	}
+}

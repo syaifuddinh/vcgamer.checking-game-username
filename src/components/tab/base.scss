@@ -1,0 +1,13 @@
+@import "@/assets/css/var/_mixins";
+@import "@/assets/css/var/_variables";
+
+.base-tab {
+	@include flex;
+
+	gap: #{$base-spacing};
+
+	.base-tab_item {
+		font-weight: 600;
+		cursor: pointer;
+	}
+}

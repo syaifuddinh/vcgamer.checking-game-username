@@ -1,0 +1,41 @@
+@import "@/assets/css/var/_mixins.scss";
+
+$border-color: $black-color;
+
+.table {
+	width: 100%;
+
+	th, td {
+		padding: #{$base-spacing * 0.375};
+	}
+
+	tbody * {
+		font-size: 0.75rem;
+		font-weight: 500;
+	}
+
+	tbody td {
+		font-weight: 400;
+		border: 1px solid #{$border-color};
+		border-top: none;
+		border-right: none;
+
+		&:last-child {
+			border-right: 1px solid #{$border-color};
+		}
+	}
+
+	thead * {
+		font-size: 0.825rem;
+		font-weight: 500;
+
+		th {
+			border: 1px solid #{$border-color};
+			border-right: none;
+
+			&:last-child {
+				border-right: 1px solid #{$border-color};
+			}	
+		}
+	}
+}

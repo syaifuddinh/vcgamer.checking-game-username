@@ -1,0 +1,29 @@
+@import "@/assets/css/var/_mixins.scss";
+
+.checking-game-modal {
+	.button-bar {
+		margin-top: #{$base-spacing};
+	}
+}
+
+.checking-game-username {
+	.checking-game-username_2nd-row {
+		@include flex;
+		flex-wrap: wrap;
+
+		gap: #{$base-spacing};
+		margin-top: #{$base-spacing};
+	}
+
+	.checking-game-username_picking-label {
+		margin-top: #{$base-spacing};
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	@media only screen and (max-width: #{$sm-size}) {
+		.checking-game-username_picking-label {
+			font-size: 1.25rem;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+@import "@/assets/css/var/_mixins.scss";
+
+$header-height: 3.5rem;
+
+header {
+	height: #{$header-height};
+}
+
+.header-bar {
+	@include flex;
+	@include flex-between-x;
+	background: white;
+	height: #{$header-height};
+	padding: 0 #{$base-spacing * 2};
+	width: calc(100% - 3rem);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+
+	* {
+		font-weight: 500;
+	}
+
+	.header-bar_menu-button {
+		cursor: pointer;
+	}
+
+	.header-bar_profile {
+		cursor: pointer;
+	}
+
+	.header-bar__profile-thumbnail {
+		margin-right: #{$base-spacing * 0.5};
+	}
+
+	.header-bar_col {
+		@include inline-flex;
+		@include flex-center-y;
+		height: 100%;
+	} 
+
+	.header-bar__profile-expand-more {
+		@include flex;
+		@include flex-end-y;
+	}
+}

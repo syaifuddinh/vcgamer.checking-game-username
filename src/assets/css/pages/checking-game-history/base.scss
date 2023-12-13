@@ -1,0 +1,12 @@
+@import "@/assets/css/var/_mixins.scss";
+
+.checking-game-history_filter-bar {
+	@include flex;
+	gap: #{$base-spacing};
+}
+
+.checking-game-history_2nd-row {
+	@include card-base;
+
+	margin-top: #{$base-spacing};
+}

@@ -1,0 +1,21 @@
+@import "./_mixins";
+@import "@/assets/css/var/_mixins";
+
+
+.google-button {
+	@include button;
+	@include flex-center;
+	background: white;
+	border: 1px solid #{$light-gray-color};
+	gap: #{$base-spacing * 0.75};
+
+	.google-button_icon {
+		@include flex;
+		@include flex-end-y;
+	}
+
+	img {
+		height: 1.5rem;
+		width: auto;
+	}
+}

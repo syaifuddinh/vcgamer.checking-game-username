@@ -1,0 +1,11 @@
+@import "@/assets/css/var/_variables";
+
+@mixin button {
+	font-weight: 500;
+	padding: #{$base-spacing};
+	border-radius: #{$base-radius};
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	cursor: pointer;
+}

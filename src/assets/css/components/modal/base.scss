@@ -1,0 +1,46 @@
+@import "@/assets/css/var/_mixins.scss";
+
+@mixin modal-base {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.modal {
+	@include flex-center;
+	@include modal-base;
+	z-index: 80;
+
+	.modal_backdrop {
+		@include modal-base;		
+		z-index: 81;
+		background: black;
+		opacity: 0.4;
+	}
+
+	.modal_main {
+		@include card-base;
+		min-height: 15rem;
+		min-width: 18rem;
+		max-height: 90%;
+		z-index: 82;
+	}
+
+	.modal_main__place-your-content {
+		margin-top: #{$base-spacing};
+	}
+
+	.modal_main__title {
+		font-weight: 600;
+		color: #{$black-color};
+	}
+
+	.modal_main__heading {
+		@include flex;
+		@include flex-between-x;
+
+		.modal_main__close-button {
+			cursor: pointer;
+		}
+	}
+}

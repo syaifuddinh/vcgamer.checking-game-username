@@ -1,0 +1,24 @@
+@import "./var/_variables";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@import "./components/button/base.scss";
+
+
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: darken($primary-color, 10%);
+	text-decoration: none;
+	font-weight: 600;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

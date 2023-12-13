@@ -1,0 +1,113 @@
+@import "_variables";
+
+@mixin flex {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+}
+
+@mixin input-container-base {
+	width: 100%;
+	border: 1px solid #{$gray-color};
+	overflow: hidden;
+	border-radius: #{$base-radius};
+}
+@mixin text-input-base {
+	padding: #{$base-spacing * 0.75};
+	width: 100%;
+	border: 0;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin card-interface {
+	overflow: hidden;
+	background: white;
+	border-radius: #{$base-radius};
+}
+
+@mixin card-base {
+	@include card-interface;
+	padding: #{$base-spacing * 1.25};
+}
+
+@mixin filtering-card {
+	@include card-interface;
+	padding: #{$base-spacing * 0.75} #{$base-spacing * 1.25};
+}
+
+@mixin inline-flex {
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox; 
+	display: inline-flex; 
+}
+
+@mixin flex-center-x {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+@mixin flex-between-x {
+	-webkit-box-pack: space-between;
+	-ms-flex-pack: space-between;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+@mixin flex-end-x {
+	-webkit-box-pack: flex-end;
+	-ms-flex-pack: flex-end;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+
+@mixin flex-center-y {
+	-webkit-box-align: center; 
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+@mixin flex-end-y {
+	-webkit-box-align: flex-end; 
+	-ms-flex-align: flex-end;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+}
+
+@mixin flex-end-y {
+	-webkit-box-align: flex-end; 
+	-ms-flex-align: flex-end;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+}
+
+@mixin flex-center {
+	@include flex;
+	@include flex-center-x;
+	@include flex-center-y;
+}
+
+@mixin flex-column {
+	@include flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+@mixin base-column-layout {
+	@include flex-column;
+	gap: #{$base-spacing * 0.75};
+}
+
+@mixin base-form-layout {
+	@include flex-column;
+	gap: #{$base-spacing * 0.75};
+}

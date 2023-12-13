@@ -1,0 +1,26 @@
+@import "@/assets/css/var/_variables.scss";
+@import "@/assets/css/var/_mixins.scss";
+
+.dropdown-menu {
+	border-radius: #{$base-radius};
+	display: inline-block;
+	overflow: hidden;
+
+	.dropdown-menu_item {
+		padding: #{$base-spacing};
+		background: white;
+		font-weight: 600;
+		min-width: #{$base-spacing * 10};
+		cursor: pointer;
+		font-size: 0.875rem;
+		border-bottom: 1px solid #{$light-gray-color};
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.dropdown-menu_logout {
+		color: #{$danger-color};
+	}
+}

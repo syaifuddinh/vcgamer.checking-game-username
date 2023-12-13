@@ -1,0 +1,60 @@
+@import "@/assets/css/var/_variables.scss";
+@import "@/assets/css/var/_mixins.scss";
+
+.default-layout {
+	background: #{$light-gray-color};
+	position: absolute;
+	min-height: 100%;
+	width: 100%;
+	max-width: 100%;
+
+	.default-layout_title {
+		font-size: 2rem;
+		font-weight: 600;
+	}
+
+	@media only screen and (max-width: $sm-size) {
+		.default-layout_title {
+			font-size: 1.625rem;
+		}
+	}
+
+	.default-layout_our-content {
+		margin-top: #{$base-spacing};
+		width: 100%;
+	}
+
+	* {
+		color: #{$black-color};
+	}
+
+	main {
+		@include flex;
+
+		.main-content {
+			padding: #{$base-spacing} #{$base-spacing * 1.5};
+			flex-grow: 1;
+			max-width: 71%;
+		}
+	}
+}
+
+.default-layout_date-input-bar__title {
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+.default-layout_date-input-bar {
+
+	.default-layout_date-input-bar__main {
+		@include flex;
+		gap: #{$base-spacing};
+	}
+}
+
+.default-layout.sidebar-is-invisible {
+	.main-content {
+		max-width: 100%;
+		width: 100%;
+	}
+}

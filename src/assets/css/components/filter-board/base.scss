@@ -1,0 +1,19 @@
+@import "@/assets/css/var/_mixins.scss";
+
+.filter-board {
+	@include filtering-card;
+
+	margin-top: #{$base-spacing};
+
+	.filter-board_main {
+		margin-top: #{$base-spacing};
+	}
+
+	.filter-board_heading {
+		@include flex;
+		@include flex-center-y;
+
+		gap: #{$base-spacing * 0.25};
+		font-weight: 500;
+	}
+}

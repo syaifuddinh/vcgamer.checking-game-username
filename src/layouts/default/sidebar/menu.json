@@ -1,0 +1,24 @@
+{
+	"list": [
+		{
+			"key": "dashboard",
+			"label": "dashboard",
+			"url": "/"
+		},
+		{
+			"key": "user-management",
+			"label": "user management",
+			"url": "/user-management"
+		},
+		{
+			"key": "checking-game",
+			"label": "Checking Game Username",
+			"url": "/checking-game-username"
+		},
+		{
+			"key": "checking-game-history",
+			"label": "Checking Game History",
+			"url": "/checking-game-history"
+		}
+	]
+}

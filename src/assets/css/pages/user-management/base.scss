@@ -1,0 +1,10 @@
+@import "@/assets/css/var/_mixins.scss";
+
+.dashboard_1st-row {
+}
+
+.user-management_2nd-row {
+	@include card-base;
+
+	margin-top: #{$base-spacing};
+}

@@ -1,0 +1,13 @@
+@import "@/assets/css/var/_mixins";
+
+$button-color: $primary-color;
+
+.date-input.text-input {
+	.react-datepicker__input-container {
+		@include input-container-base;
+	}
+
+	.react-datepicker__input-container input {
+		@include text-input-base;
+	}
+}

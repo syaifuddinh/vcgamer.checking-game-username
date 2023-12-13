@@ -1,0 +1,47 @@
+@import "./_mixins";
+@import "@/assets/css/var/_mixins";
+
+$colors: (
+	"primary": $primary-color,
+	"success": $success-color,
+	"danger": $danger-color
+);
+
+.button-bar {
+	@include flex;
+	@include flex-center-y;
+	gap: #{$base-spacing * 0.5};
+}
+
+.button-with-icon {
+	img {
+		height: 0.875rem;
+		width: auto;
+	}
+}
+
+.button {
+	@include button;
+
+	@each $key, $value in $colors {
+		&.#{$key} {
+			color: white;
+			background: #{$value};
+		}
+
+		&.#{$key}:hover {
+			background: darken($value, 10%);
+		}
+	}
+
+	&.disabled {
+		background: #{$light-gray-color};
+		color: #{$black-color};
+		cursor: not-allowed;
+
+		&:hover {
+			background: #{$light-gray-color};
+			color: #{$black-color};
+		}
+	}
+}

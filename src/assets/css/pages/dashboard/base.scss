@@ -1,0 +1,29 @@
+@import "@/assets/css/var/_mixins.scss";
+
+.dashboard_1st-row {
+	@include flex;
+	@include flex-between-x;	
+	gap: #{$base-spacing * 1.5};
+}
+
+.dashboard_summary-card {
+	@include card-base;
+	width: 100%;
+
+	.dashboard_summary-card__amount {
+		font-weight: 600;
+		font-size: 1.5rem;
+
+		&.fail {
+			color: #{$danger-color};
+		}
+
+		&.success {
+			color: #{$success-color};
+		}
+	}
+
+	.dashboard_summary-card__description {
+		font-size: 1.25rem;
+	}
+}
